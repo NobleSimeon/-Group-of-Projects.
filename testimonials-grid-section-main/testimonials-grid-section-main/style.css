@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(210, 46%, 95%);
+}
+main {
+    width: min(95%, 70rem);
+    display: grid;
+    gap: 20px;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+}
+.testimonial {
+    border-radius: 10px;
+    padding: 20px;
+}
+.testimonial-1 {
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-position: right 10% top;
+    background-color: hsl(263, 55%, 52%);
+    background-repeat: no-repeat;
+    color: hsl(0, 0%, 100%);
+    grid-area: one;
+}
+.testimonial-2 {
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+    grid-area: two;
+}
+.testimonial-3 {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(219, 29%, 14%);
+    grid-area: three;
+}
+.testimonial-4 {
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 100%);
+    grid-area: four;
+}
+.testimonial-5 {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(219, 29%, 14%);
+    grid-area: five;
+}
+.head {
+    display: flex;
+    align-items: center;
+}
+.img {
+    margin-right: 15px;
+}
+img {
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+.name {
+    font-size: 15px;
+    font-weight: 500;
+}
+.verified {
+    font-size: 12px;
+    font-weight: lighter;
+    opacity: 50%;
+}
+.body p:first-child {
+    font-size: 20px;
+    font-weight: 500;
+    margin-block: 10px;
+}
+.body p:last-child {
+    font-size: 12pxpx;
+    font-weight: 300;
+    opacity: 70%;
+}
+@media screen and (min-width: 900px) {
+    main {
+        grid-template-areas: 
+        "one one two five"
+        "three four four five";
+    }
+}
+@media screen and (max-width: 900px) {
+    main {
+        grid-template-areas: 
+        "one one"
+        "two three" 
+        "four four" 
+        "five five";
+    }
+}
+@media screen and (max-width: 500px) {
+    main {
+        grid-template-areas: 
+        "one"
+        "two"
+        "three" 
+        "four" 
+        "five";
+    }
+}
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }

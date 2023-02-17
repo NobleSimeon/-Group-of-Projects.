@@ -1,0 +1,220 @@
+:root {
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    width: 90%;
+}
+header, article {
+    width: 100%;
+    padding: 40px;
+    background-color: var(--Dark-Blue);
+    border-radius: 7px;
+    z-index: 1;
+}
+header {
+    border-top-right-radius: 95px;
+    max-width: 375px;
+
+}
+.image {
+    width: 130px;
+}
+.image img {
+    width: 100%;
+}
+.icons.flex {
+    margin-top: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    max-width: 200px;
+}
+.img-box {
+    background-color: var(--Very-Dark-Blue);
+    flex-basis: 30%;
+    max-width: 45px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.img-box img {
+    width: 50%;
+}
+article {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--Pale-Blue);
+    padding-top: 30px;
+    position: relative;
+    margin-bottom: 80px;
+}
+article p {
+    font-size: 12px;
+}
+article p strong {
+    font-size: 12px;
+}
+
+.loader {
+    width: 100%;
+    height: 15px;
+    margin-block: 10px;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 15px;
+}
+.loader .loading {
+    width: 70%;
+    height: 100%;
+    border: 2px solid var(--Very-Dark-Blue);
+    border-radius: inherit;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    position: relative;
+}
+.loader .loading::after {
+    content: "";
+    width: 9px;
+    aspect-ratio: 1;
+    background-color: var(--Pale-Blue);
+    position: absolute;
+    border-radius: 50%;
+    right: 1.5px;
+    top: 1px;
+}
+.space-range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.space-range span {
+    font-size: 11px;
+}
+.space-left h1 {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+.space-left h1 span {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 11px;
+    color: var(--Grayish-Blue);
+}
+@media (min-width: 700px) {
+  
+    main.flex {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    header {
+        flex-basis: 40%;
+        margin-right: 20px;
+    }
+    article {
+        margin: 0;
+        flex: 1;
+        text-align: left;
+    }
+    body {
+        background-color: var(--Very-Dark-Blue);
+    }
+    .desktop-bg {
+        position: absolute;
+        width: 100%;
+        height: 50vh;
+        bottom: 0;
+        background-image: url(./images/bg-desktop.png);
+        z-index: -1;
+    }
+    
+}
+@media (max-width: 699px) {
+    body {
+        background-image: url(./images/bg-mobile.png);
+        background-color: var(--Very-Dark-Blue);
+    }
+}
+@media (max-width:900px) {
+    .space-left {
+        position: absolute;
+        bottom: -20%;
+        color: var(--Very-Dark-Blue);
+        background-color: var(--Pale-Blue);
+        padding: 10px 20px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media (min-width:900px) {
+    .space-left {
+        position: absolute;
+        color: var(--Very-Dark-Blue);
+        background-color: var(--Pale-Blue);
+        padding: 7px 15px;
+        border-radius: 10px;
+        border-bottom-right-radius: 0;
+        right: 40px;
+        top: 50%;
+        transform: translateY(-170%);
+    }
+    .space-left::after {
+        content: "";
+        width: 22px;
+        aspect-ratio: 1;
+        right: 0;
+        bottom: -19px;
+        background-color: var(--Pale-Blue);
+        position: absolute;
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+        .attribution a { color: hsl(228, 45%, 44%); }
